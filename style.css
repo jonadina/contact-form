@@ -1,0 +1,32 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+}
+
+.requirements ul{
+    text-align: center;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.contact-form{
+    text-align: center;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.contact-form input, textarea{
+    display: block;
+    margin: 25px auto;
+}
+
+.errors ul{
+    color: red;
+    list-style-type: none;
+    text-align: center;
+}
