@@ -37,7 +37,7 @@
     </div>
 
     <div class="contact-form">
-        <form action="onSubmit.php" method="post">
+        <form name="contact-form" action="onSubmit.php" method="post">
 
             <label>
                 Name
@@ -64,7 +64,7 @@
                 <input name="newsletter" type="radio">
             </label>
 
-            <input type="submit" value="Submit"/>
+            <input name="submit" type="button" value="Submit" onclick="validateForm();"/>
 
         </form>
 
