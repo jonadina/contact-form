@@ -28,7 +28,7 @@
         <ul>
             <?php
 
-                session_start();
+                session_start();    //  you cannot start a session after content has already been sent, you will get a headers error
                 foreach($_SESSION['validation'] as $error => $value){
                     echo "<li>" . $error . " is invalid" . "<li>";
                 }
