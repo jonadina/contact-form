@@ -99,7 +99,7 @@ class Submission {
 
         $from = $this->email; // sender
         $subject = "Contact Me!";
-        $message = $this->message;
+        $message = "ip: ".$_SERVER['REMOTE_ADDR'].", Messge: ".$this->message;
         // send mail
         if(!mail("logan@loganhenson.com",$subject,$message,"From: $from\n")){
             die('email error');
