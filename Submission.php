@@ -6,6 +6,8 @@
  * Time: 9:34 PM
  */
 
+session_start();
+
 require_once('config/database.php');
 require_once('libs/validations.php');
 require_once('libs/database.php');
@@ -65,8 +67,6 @@ class Submission {
 
     function store(){
 
-        //create tables (psuedo-migrations)
-
         createtable('to_contact',
             array(
                 'name' => 'CHAR(30) NOT NULL',
@@ -79,8 +79,6 @@ class Submission {
             array(
                 'email' => 'CHAR(30) NOT NULL UNIQUE'
             ));
-
-        //update   ));
 
         inserttable('to_contact',
             array(
@@ -97,6 +95,14 @@ class Submission {
                     'email' => $this->email
                 ));
 
+        }
+
+        $from = $this->email; // sender
+        $subject = "Contact Me!";
+        $message = $this->message;
+        // send mail
+        if(!mail("logan@loganhenson.com",$subject,$message,"From: $from\n")){
+            die('email error');
         }
 
     }

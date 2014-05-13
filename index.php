@@ -1,3 +1,4 @@
+<?php session_start();session_unset();session_destroy();$_SESSION = array();?>
 <html>
 <head class="no-js">
     <meta charset="utf-8">
@@ -37,7 +38,7 @@
     </div>
 
     <div class="contact-form">
-        <form name="contact-form" action="onSubmit.php" method="post">
+        <form id="contact-form" action="onSubmit.php" method="post">
 
             <label>
                 Name
@@ -64,7 +65,7 @@
                 <input name="newsletter" type="radio">
             </label>
 
-            <input name="submit" type="button" value="Submit" onclick="validateForm();"/>
+            <input type="button" value="Submit" onclick="validateForm();"/>
 
         </form>
 
