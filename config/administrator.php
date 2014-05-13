@@ -6,5 +6,6 @@
  * Time: 12:05 AM
  */
 
-$name = "Logan Henson";
-$email = "logan@loganhenson.com";
+$administrator = new stdClass();
+$administrator->name = "Logan Henson";
+$administrator->email = "logan@loganhenson.com";

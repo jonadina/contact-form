@@ -6,9 +6,10 @@
  * Time: 9:37 PM
  */
 
-include_once('Submission.php');
+//include_once('Submission.php');
 
-session_start();
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 $submission = new Submission(
     $_POST['name'],
@@ -18,4 +19,9 @@ $submission = new Submission(
     $_POST['newsletter']
 );
 
-$submission->isValid();
+if($submission->isValid()){
+    $submission->store();
+    header('Location:success.php');
+}else{
+    die('bad');
+}

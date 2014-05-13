@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Contact Form Assignment PHP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="assets/style.css" type="text/css" />
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -27,10 +27,9 @@
         <ul>
             <?php
 
-                session_start();
-                foreach($_SESSION['validation'] as $error => $value){
-                    echo "<li>" . $error . " is invalid" . "<li>";
-                }
+            foreach($_SESSION['validation'] as $error => $value){
+                echo "<li>" . $error . " is invalid" . "<li>";
+            }
 
             ?>
         </ul>
@@ -78,7 +77,7 @@
 <script type="text/javascript">
     function downloadJSAtOnload() {
         var element = document.createElement("script");
-        element.src = "script.js";
+        element.src = "assets/script.js";
         document.body.appendChild(element);
     }
     if (window.addEventListener)
